@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BoulderTransition" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,130 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000013" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="zFO-dQ-CsF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKS-Rd-92K">
+                                <rect key="frame" x="16" y="150" width="568" height="244"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">The IFSC Bouldering World Cup is a serie of bouldering competitions held annually and organized by the International Federation of Sport Climbing (IFSC). The number of competitions and venues vary from year to year. The first World Cup was held under the auspices of UIAA in 1989, World Cups were held under the auspices of IFSC from 2007. For this reason before 2007 the World Cup was called UIAA Climbing World Cup. The belows are some of the current top atheletes.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCE-Ly-mcL">
+                                <rect key="frame" x="0.0" y="402" width="600" height="198"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go Bouldering" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybO-14-8QP">
+                                <rect key="frame" x="16" y="28" width="568" height="114"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zFO-dQ-CsF" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="8GC-P2-la7"/>
+                            <constraint firstItem="zFO-dQ-CsF" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="EWI-Xt-SMm"/>
+                            <constraint firstItem="NCE-Ly-mcL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="F1f-QN-AIP"/>
+                            <constraint firstItem="VKS-Rd-92K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GIv-gE-Sk3"/>
+                            <constraint firstItem="ybO-14-8QP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GPV-y2-tnD"/>
+                            <constraint firstItem="VKS-Rd-92K" firstAttribute="top" secondItem="ybO-14-8QP" secondAttribute="bottom" constant="8" id="UWv-1p-A8x"/>
+                            <constraint firstItem="ybO-14-8QP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="VWX-c7-DBV"/>
+                            <constraint firstAttribute="centerX" secondItem="NCE-Ly-mcL" secondAttribute="centerX" id="Yai-64-ZAi"/>
+                            <constraint firstItem="zFO-dQ-CsF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="lZ7-bA-SQZ"/>
+                            <constraint firstItem="ybO-14-8QP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mJd-cj-2MJ"/>
+                            <constraint firstItem="NCE-Ly-mcL" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="nyO-tT-LK0"/>
+                            <constraint firstItem="VKS-Rd-92K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="130" id="qre-em-8hj"/>
+                            <constraint firstItem="NCE-Ly-mcL" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.33" id="quv-7E-gFG"/>
+                            <constraint firstItem="NCE-Ly-mcL" firstAttribute="top" secondItem="VKS-Rd-92K" secondAttribute="bottom" constant="8" id="uKi-ic-MYT"/>
+                            <constraint firstItem="zFO-dQ-CsF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wkt-zv-fbc"/>
+                            <constraint firstItem="VKS-Rd-92K" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wxQ-rW-7Sh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bgView" destination="zFO-dQ-CsF" id="Wa2-pC-YBB"/>
+                        <outlet property="scrollView" destination="NCE-Ly-mcL" id="BKr-i1-iG5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Climber Profile View Controller-->
+        <scene sceneID="hsl-JW-wWl">
+            <objects>
+                <viewController storyboardIdentifier="ClimberProfileViewController" id="bsb-m8-Tm5" customClass="ClimberProfileViewController" customModule="BoulderTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7YQ-zI-ivn"/>
+                        <viewControllerLayoutGuide type="bottom" id="XlY-VM-lBf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K3X-xH-Men">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fgk-pH-hyI">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jZ-RD-kxM">
+                                <rect key="frame" x="0.0" y="402" width="600" height="198"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CsV-tj-ikY">
+                                        <rect key="frame" x="139" y="16.5" width="322" height="37.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="322" id="0rv-FF-kHo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeZ-zA-ZPa">
+                                        <rect key="frame" x="175" y="59" width="250" height="109"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="98j-XX-nPS"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="DeZ-zA-ZPa" secondAttribute="bottom" constant="30" id="2Gd-Zb-8Fi"/>
+                                    <constraint firstItem="CsV-tj-ikY" firstAttribute="height" secondItem="9jZ-RD-kxM" secondAttribute="height" multiplier="0.18" constant="2" id="HMh-ax-y1X"/>
+                                    <constraint firstAttribute="centerX" secondItem="DeZ-zA-ZPa" secondAttribute="centerX" id="PXd-3b-KVF"/>
+                                    <constraint firstAttribute="centerX" secondItem="CsV-tj-ikY" secondAttribute="centerX" id="aXx-Lq-8Rm"/>
+                                    <constraint firstItem="DeZ-zA-ZPa" firstAttribute="height" secondItem="9jZ-RD-kxM" secondAttribute="height" multiplier="0.55" id="ijF-Ia-g9e"/>
+                                    <constraint firstItem="DeZ-zA-ZPa" firstAttribute="top" secondItem="CsV-tj-ikY" secondAttribute="bottom" constant="5" id="zif-Za-ECT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fgk-pH-hyI" firstAttribute="height" secondItem="K3X-xH-Men" secondAttribute="height" id="80K-L0-VBn"/>
+                            <constraint firstItem="9jZ-RD-kxM" firstAttribute="height" secondItem="Fgk-pH-hyI" secondAttribute="height" multiplier="0.33" id="C9N-Ag-3kc"/>
+                            <constraint firstAttribute="centerX" secondItem="9jZ-RD-kxM" secondAttribute="centerX" id="K6K-XC-CPb"/>
+                            <constraint firstItem="Fgk-pH-hyI" firstAttribute="width" secondItem="K3X-xH-Men" secondAttribute="width" id="ObE-x9-750"/>
+                            <constraint firstItem="XlY-VM-lBf" firstAttribute="top" secondItem="9jZ-RD-kxM" secondAttribute="bottom" id="XUw-wi-zyU"/>
+                            <constraint firstAttribute="centerX" secondItem="Fgk-pH-hyI" secondAttribute="centerX" id="eMl-P7-h7u"/>
+                            <constraint firstAttribute="width" secondItem="9jZ-RD-kxM" secondAttribute="width" id="vOX-6m-LGm"/>
+                            <constraint firstAttribute="centerY" secondItem="Fgk-pH-hyI" secondAttribute="centerY" id="x4c-5O-Z8z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="Fgk-pH-hyI" id="KfA-6U-AAf"/>
+                        <outlet property="descriptionView" destination="9jZ-RD-kxM" id="u65-MF-oo7"/>
+                        <outlet property="nameLabel" destination="CsV-tj-ikY" id="gYz-Rz-Zu0"/>
+                        <outlet property="profileTextView" destination="DeZ-zA-ZPa" id="hQj-dX-QcD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4o5-2g-ZN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="361"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="bg" width="730" height="1296"/>
+    </resources>
 </document>
